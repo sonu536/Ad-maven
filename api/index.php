@@ -2,7 +2,7 @@
 header('Access-Control-Allow-Origin: *');
 $xffaddrs = explode(',',$_SERVER['HTTP_X_FORWARDED_FOR']);
 $_SERVER['REMOTE_ADDR'] = $xffaddrs[0];
-$endpoint = 'https://unlockcontent.net/api/v2';
+$endpoint = 'https://publishers.ad-maven.com/api/public/content_locker';
     if(isset($_GET["aff_sub4"])) {
      $aff_sub4 = htmlspecialchars($_GET["aff_sub4"]);
 };
@@ -18,7 +18,7 @@ $url = $endpoint . '?' . http_build_query($data);
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $url,);
 curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-    'Authorization: Bearer 27968|4cQStKTIiTQ4BU8CrXbYOy7Qb41JFzDPJ92dz9bsfb47f1a2'
+    'Authorization: Bearer eb962b7f09770fddb36118fc0294f38affa4c13ae004df630897a34377cf1f0a'
 ));
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 $result = curl_exec($ch);
